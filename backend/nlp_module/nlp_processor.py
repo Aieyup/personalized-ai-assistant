@@ -12,7 +12,6 @@ from stock import get_stock_price
 
 class NLPProcessor:
     def __init__(self):
-        # Initialize the NLP pipeline
         self.qa_pipeline = pipeline("question-answering")
         self.intents = ['get_weather', 'set_reminder', 'ask_question', 'get_news', 'get_stock_price', 'manage_tasks']
         self.vectorizer = TfidfVectorizer()
@@ -108,7 +107,7 @@ class NLPProcessor:
         # elif intent == 'get_news':
         #     # Handle fetching news
         #     topic = self.extract_topic(question)
-        #     return self.get_news(topic)
+        #     
 
         else:
             # Default fallback if the intent is not recognized
